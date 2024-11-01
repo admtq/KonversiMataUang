@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #f5f5f5; */
+    transition: background-image 3s ease-in-out;
+}
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* belakang main-content */
+}
+.header {
+    background-color: #002147;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.main-content {
+    text-align: center;
+    padding: 50px 20px;
+    z-index: 1; /* depan bg-overlay */
+}
+.main-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.main-content p {
+    font-size: 18px;
+    color: #666;
+}
+.converter {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 30px;
+    width: 75%;
+    margin-top: 30px;
+}
+.converter .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.converter .input-group div {
+    flex: 1;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: left;
+    font-size: 15px;
+}
+.swapbutton{
+    margin: 0px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.converter .input-group div input {
+    border: none;
+    width: 100%;
+    font-size: 24px;
+}
+.converter .input-group div select {
+    border: none;
+    width: 100%;
+    font-size: 24px;
+}
+.converter .convert-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.converter .convert-button:hover {
+    background-color: #002147;
+}
+.loading-spinner {
+    display: none;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.result {
+    font-size: 24px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #666;
+}
